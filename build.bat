@@ -1,4 +1,4 @@
 @echo off
-poetry run python convert_icon.py icon.png
 rsrc -manifest app.manifest -ico icon.ico -o rsrc.syso
-go build
+go build -ldflags "-H windowsgui"
+move tuesday.exe Tuesday.exe
